@@ -1,8 +1,93 @@
 ---
-title       : Insert the chapter title here
+title       : Contingency Tables
 description : Insert the chapter description here
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:21e5dc8285
+
+## Creating 2x2 table
+
+* You can create a table using ` table() ` function. ` table(A,B) ` A and B are vectors, A will be rows, B will be columns.
+
+* You can use ` prop.table() ` to change raw frequencies to percentages
+
+* ` prop.table(mydata, 1) ` for row and ` prop.table(mydata, 2) ` for column percentages
+
+*** =instructions
+
+- Create a numeric vector **age** with the values ` 50, 10, 70 `
+- Create a string character vector **gender** with the value **male** and **female**
+- Create a table using ` table() ` with gender as rows and age as columns
+- Add margins to your table with ` addmargins() `
+- Create a probability table (with percentage instead of raw numbers). First calculate percentages over columns, then over rows
+
+*** =hint
+
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+
+*** =sample_code
+```{r}
+#numeric vector
+
+age <- 
+
+# character vector
+
+gender <- 
+
+# table
+mytable <-
+
+# margins
+
+
+# prop.table for columns
+
+
+
+# prop.table for rows
+
+```
+
+*** =solution
+```{r}
+#numeric vector
+
+age <- c(50, 10, 70)
+
+# character vector
+
+gender <- c("male","female")
+
+# table
+mytable <- table(gender,age)
+
+# margins
+addmargins(mytable)
+
+# prop.table for columns
+prop.table(mytable, 2)
+
+
+# prop.table for rows
+prop.table(mytable, 1)
+
+```
+*** =sct
+```{r}
+test_object("age", incorrect_msg = "incorrect")
+test_object("gender", incorrect_msg = "do not forget quotes")
+test_object("mytable",incorrect_msg = "try again")
+test_output_contains("addmargins(mytable)")
+test_output_contains("prop.table(mytable, 2)")
+test_output_contains("prop.table(mytable, 1)")
+success_msg("Good work!")
+
+```
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:cfb29eccfc
 ## A really bad movie
