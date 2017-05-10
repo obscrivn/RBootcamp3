@@ -1,6 +1,6 @@
 ---
 title       : Contingency Tables
-description : Insert the chapter description here
+description : 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:21e5dc8285
 
