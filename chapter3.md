@@ -26,13 +26,12 @@ test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3))
 
 
 ## Regression Packages
-You can use help functions to read about the following functions ` lm `, ` glm ` and ` mlogit `
+You can use help functions to read about the following functions ` lm ` and ` glm `
 
-Which one allows to perform regression with multinomial dependent/response variable (more than two factors)?
+Which one allows to perform regression with continuous and categorical dependent/response variable?
 
 *** =instructions
 - lm
-- mlogit
 - glm
 
 
@@ -40,6 +39,5 @@ Which one allows to perform regression with multinomial dependent/response varia
 ```{r}
 msg1 = "Try again"
 msg2 = "Well done"
-msg3 = "Try again"
-test_mc(correct = 2, feedback_msgs = c(msg1,msg2,msg3))
+test_mc(correct = 2, feedback_msgs = c(msg1,msg2))
 ```
