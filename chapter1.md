@@ -116,7 +116,7 @@ colnames(smoke) <- c("High","Low","Middle")
 rownames(smoke) <- c("current","former","never")
 
 # data frame
-
+mydata <-
 # str
 
 
@@ -132,16 +132,16 @@ colnames(smoke) <- c("h","l","m")
 rownames(smoke) <- c("current","former","never")
 
 #data frame
-smoke <- as.data.frame(smoke)
+mydata <- as.data.frame(smoke)
 #str
-str(smoke)
+str(mydata)
 
 ```
 *** =sct
 ```{r}
 test_object("colnames(smoke)")
-test_object("smoke")
-test_object("str(smoke)")
+test_object("mydata")
+test_object("str(mydata)")
 success_msg("Good work!")
 
 ```
