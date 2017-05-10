@@ -3,7 +3,7 @@ title       : T-Test
 description : 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:4c038f7bad
-## T-test
+## t-test
 Let's look again at the speeds in the dataframe cars. 
 *** =instructions
 
@@ -29,6 +29,7 @@ t.test(cars$speed, mu=X, conf.level = .X)
 
 # add condition and mean
 t.test(cars$speed[], mu = X)
+
 ```
 
 *** =solution
