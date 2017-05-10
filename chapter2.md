@@ -44,7 +44,7 @@ t.test(cars$speed[cars$dist < 40], mu = 12)
 *** =sct
 ```{r}
 
-test_output_contains("t.test(cars$speed, mu=, conf.level = .90)")
+test_output_contains("t.test(cars$speed, mu=20, conf.level = .90)")
 test_output_contains("t.test(cars$speed[cars$dist < 40], mu = 12)")
 success_msg("Good work!")
 
