@@ -35,7 +35,7 @@ t.test(cars$speed, mu=X, conf.level = .X)
 *** =solution
 ```{r}
 # change X by the correct values
-t.test(cars$speed, mu=, conf.level = .90) 
+t.test(cars$speed, mu=20, conf.level = .90) 
 
 # add condition and mean
 t.test(cars$speed[cars$dist < 40], mu = 12)
