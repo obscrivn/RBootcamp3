@@ -29,6 +29,7 @@ description : Insert the chapter description here
 
 *** =sample_code
 ```{r}
+
 smoke <- matrix(c(51,43,22,92,28,21,68,22,9),ncol=3,byrow=TRUE)
 
 colnames(smoke) <- c("High","Low","Middle")
