@@ -6,7 +6,7 @@ description : Insert the chapter description here
 
 ## Creating 2x2 table
 
-* You can create a table using ` table() ` function. ` table(A,B) ` A and B are vectors, A will be rows, B will be columns.
+* You can create a table using ` as.table() ` function.
 
 * You can use ` prop.table() ` to change raw frequencies to percentages
 
@@ -14,9 +14,7 @@ description : Insert the chapter description here
 
 *** =instructions
 
-- Create a numeric vector **age** with the values ` 50, 70 `
-- Create a string character vector **gender** with the value **male** and **female**
-- Create a table using ` table() ` with gender as rows and age as columns
+- Convert a matrix into  a table using ` as.table() `
 - Add margins to your table with ` addmargins() `
 - Create a probability table (with percentage instead of raw numbers). First calculate percentages over columns, then over rows
 
@@ -31,16 +29,14 @@ description : Insert the chapter description here
 
 *** =sample_code
 ```{r}
-#numeric vector
+smoke <- matrix(c(51,43,22,92,28,21,68,22,9),ncol=3,byrow=TRUE)
 
-age <- 
+colnames(smoke) <- c("High","Low","Middle")
 
-# character vector
+rownames(smoke) <- c("current","former","never")
 
-gender <- 
-
-# table
-mytable <-
+# convert smoke into a table
+smoke <-
 
 # margins
 
@@ -55,36 +51,35 @@ mytable <-
 
 *** =solution
 ```{r}
-#numeric vector
 
-age <- c(50, 70)
+smoke <- matrix(c(51,43,22,92,28,21,68,22,9),ncol=3,byrow=TRUE)
 
-# character vector
+colnames(smoke) <- c("High","Low","Middle")
 
-gender <- c("male","female")
+rownames(smoke) <- c("current","former","never")
+
+smoke <- as.table(smoke)
 
 # table
-mytable <- table(gender,age)
+smoke <- table(gender,age)
 
 # margins
-addmargins(mytable)
+addmargins(smoke)
 
 # prop.table for columns
-prop.table(mytable, 2)
+prop.table(smoke, 2)
 
 
 # prop.table for rows
-prop.table(mytable, 1)
+prop.table(smoke, 1)
 
 ```
 *** =sct
 ```{r}
-test_object("age", incorrect_msg = "incorrect")
-test_object("gender", incorrect_msg = "do not forget quotes")
-test_object("mytable",incorrect_msg = "try again")
-test_output_contains("addmargins(mytable)")
-test_output_contains("prop.table(mytable, 2)")
-test_output_contains("prop.table(mytable, 1)")
+test_object("smoke",incorrect_msg = "try again")
+test_output_contains("addmargins(smoke)")
+test_output_contains("prop.table(smoke, 2)")
+test_output_contains("prop.table(smoke, 1)")
 success_msg("Good work!")
 
 ```
