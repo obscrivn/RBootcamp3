@@ -90,7 +90,7 @@ You can convert you data into data frame by using ` as.data.frame() `
 
 *** =instructions
 
-- Change the line 1 : instead of byrow=TRUE, use byrow=FALSE
+- Change the line 1 : instead of byrow=TRUE, use byrow=FALSE, add number **15** at the end of the vector
 - Change ncol to 2 instead of 3
 - Change colnames to only High and Low
 - Change row name to only current and former
@@ -133,7 +133,7 @@ smoke <- as.data.frame(smoke)
 *** =solution
 ```{r}
 
-smoke <- matrix(c(51,43,22,92,28,21,68,22,9),ncol=2,byrow=FALSE)
+smoke <- matrix(c(51,43,22,92,28,21,68,22,9,15),ncol=2,byrow=FALSE)
 
 colnames(smoke) <- c("High","Low")
 
