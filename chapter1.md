@@ -83,10 +83,10 @@ success_msg("Good work!")
 
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:ada56e2f25
-## Convert table to data frame
+## Modify your data frame
 * You can convert a table to a data frame using ` as.data.frame() ` function.
 
-* You use ` levels() ` to check factor levels
+* You can change colnames and rownames
 
 * You can use ` relevel() ` to change the order of levels 
 
@@ -94,9 +94,13 @@ success_msg("Good work!")
 
 *** =instructions
 
+- Change the line 1 : instead of byrow=TRUE, use byrow=FALSE
+- Change ncol to 2 insteda of 3
+- Change colnames to only High and Low
 - Convert a table into  a data frame using ` as.data.frame() `
 - Type ` str() ` function
-- Check level for 
+
+
 
 *** =hint
 
@@ -116,10 +120,9 @@ colnames(smoke) <- c("High","Low","Middle")
 
 rownames(smoke) <- c("current","former","never")
 
-# convert smoke into a table
-smoke <-
+smoke <- as.data.frame(smoke)
 
-# margins
+# change column names
 
 
 # prop.table for columns
@@ -133,32 +136,22 @@ smoke <-
 *** =solution
 ```{r}
 
-smoke <- matrix(c(51,43,22,92,28,21,68,22,9),ncol=3,byrow=TRUE)
+smoke <- matrix(c(51,43,22,92,28,21,68,22,9),ncol=2,byrow=FALSE)
 
-colnames(smoke) <- c("High","Low","Middle")
+colnames(smoke) <- c("High","Low")
 
 rownames(smoke) <- c("current","former","never")
 
-# table
-smoke <- as.table(smoke)
+smoke <- as.data.frame(smoke)
 
-# margins
-addmargins(smoke)
-
-# prop.table for columns
-prop.table(smoke, 2)
-
-
-# prop.table for rows
-prop.table(smoke, 1)
 
 ```
 *** =sct
 ```{r}
 test_object("smoke",incorrect_msg = "try again")
-test_output_contains("addmargins(smoke)")
-test_output_contains("prop.table(smoke, 2)")
-test_output_contains("prop.table(smoke, 1)")
+test_object("colnames(smoke)")
+test_object("rownames(smoke)")
+test_object("smoke")
 success_msg("Good work!")
 
 ```
