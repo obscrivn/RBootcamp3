@@ -139,7 +139,7 @@ str(mydata)
 ```
 *** =sct
 ```{r}
-test_object("colnames(smoke)")
+#test_object("colnames(smoke)")
 test_object("mydata")
 test_object("str(mydata)")
 success_msg("Good work!")
