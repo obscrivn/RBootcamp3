@@ -39,6 +39,17 @@ t.test(cars$speed, mu=, conf.level = .90)
 t.test(cars$speed[cars$dist < 40], mu = 12)
 ```
 
+*** =sct
+```{r}
+
+test_output_contains("t.test(cars$speed, mu=, conf.level = .90)")
+test_output_contains("t.test(cars$speed[cars$dist < 40], mu = 12)")
+success_msg("Good work!")
+
+```
+
+
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:a6b607960f
 ## Correlation
 Let's again look at the dataset
@@ -102,4 +113,11 @@ attach(action.movie.data)
 cor(budget, movie_facebook_likes)
 #Compute the correlation between a movie's budget and the number of Facebook likes for just the action movies.
  
+*** =sct
+```{r}
+test_object("movie.data")
+test_object("action.movie.data")
+test_output_contains("cor(budget, movie_facebook_likes)")
+success_msg("Good work!")
 
+```
