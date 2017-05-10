@@ -83,19 +83,15 @@ success_msg("Good work!")
 
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:ada56e2f25
+
 ## Modify your data frame
-* You can convert a table to a data frame using ` as.data.frame() ` function.
 
-* You can change colnames and rownames
-
-* You can use ` relevel() ` to change the order of levels 
-
-* Ex. ` relevel(x, ref="male" )` - you changed the reference into *male** factor
+You can convert you data into data frame by using ` as.data.frame() `
 
 *** =instructions
 
 - Change the line 1 : instead of byrow=TRUE, use byrow=FALSE
-- Change ncol to 2 insteda of 3
+- Change ncol to 2 instead of 3
 - Change colnames to only High and Low
 - Convert a table into  a data frame using ` as.data.frame() `
 - Type ` str() ` function
