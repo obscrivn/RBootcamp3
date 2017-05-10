@@ -14,7 +14,7 @@ description : Insert the chapter description here
 
 *** =instructions
 
-- Create a numeric vector **age** with the values ` 50, 10, 70 `
+- Create a numeric vector **age** with the values ` 50, 70 `
 - Create a string character vector **gender** with the value **male** and **female**
 - Create a table using ` table() ` with gender as rows and age as columns
 - Add margins to your table with ` addmargins() `
@@ -57,7 +57,7 @@ mytable <-
 ```{r}
 #numeric vector
 
-age <- c(50, 10, 70)
+age <- c(50, 70)
 
 # character vector
 
