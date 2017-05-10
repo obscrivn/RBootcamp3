@@ -141,7 +141,7 @@ str(mydata)
 ```{r}
 #test_object("colnames(smoke)")
 test_object("mydata")
-test_object("str(mydata)")
+test_output_contains("str(mydata)")
 success_msg("Good work!")
 
 ```
