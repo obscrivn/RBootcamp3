@@ -27,8 +27,8 @@ Let's look again at the speeds in the dataframe cars.
 # change X by the correct values
 t.test(cars$speed, mu=X, conf.level = .X) 
 
-# add condition and mean
-t.test(cars$speed[], mu = X)
+# add condition and mean, uncomment the line
+#t.test(cars$speed[], mu = X)
 
 ```
 
