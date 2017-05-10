@@ -110,6 +110,7 @@ attach(action.movie.data)
 # another cor
 cor(budget, movie_facebook_likes)
 #Compute the correlation between a movie's budget and the number of Facebook likes for just the action movies.
+ ```
  
 *** =sct
 ```{r}
