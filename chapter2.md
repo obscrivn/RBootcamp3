@@ -62,8 +62,7 @@ http://cl.indiana.edu/~obscrivn/docs/movie_metadata.csv
 - Compute the correlation between a movie's budget and the number of Facebook likes
 - Use ` cor() ` function
 - Get all the movies with genre "Action"
-- attach new set
-- 
+- Attach new set
 
 *** =hint
 
