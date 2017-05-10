@@ -58,10 +58,8 @@ colnames(smoke) <- c("High","Low","Middle")
 
 rownames(smoke) <- c("current","former","never")
 
-smoke <- as.table(smoke)
-
 # table
-smoke <- table(gender,age)
+smoke <- as.table(smoke)
 
 # margins
 addmargins(smoke)
