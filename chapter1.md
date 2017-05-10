@@ -92,7 +92,7 @@ You can convert you data into data frame by using ` as.data.frame() `
 
 - Change the line 1 : instead of byrow=TRUE, use ` byrow=FALSE `
 - Change colnames to only **h**,**l**,**m**
-- Convert a table into  a data frame using ` as.data.frame() `
+- Convert you data into  a data frame using ` as.data.frame() `
 - Type ` str() ` function
 
 
@@ -115,16 +115,10 @@ colnames(smoke) <- c("High","Low","Middle")
 
 rownames(smoke) <- c("current","former","never")
 
-smoke <- as.data.frame(smoke)
+# data frame
 
-# change column names
+# str
 
-
-# prop.table for columns
-
-
-
-# prop.table for rows
 
 ```
 
@@ -137,8 +131,9 @@ colnames(smoke) <- c("h","l","m")
 
 rownames(smoke) <- c("current","former","never")
 
+#data frame
 smoke <- as.data.frame(smoke)
-
+#str
 str(smoke)
 
 ```
@@ -146,7 +141,6 @@ str(smoke)
 ```{r}
 test_object("smoke",incorrect_msg = "try again")
 test_object("colnames(smoke)")
-test_object("rownames(smoke)")
 test_object("smoke")
 test_object("str(smoke)")
 success_msg("Good work!")
