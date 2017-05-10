@@ -22,12 +22,13 @@ msg3 = "Well done"
 test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3))
 ```
 
---- type:MultipleChoiceExercise xp:50 skills:1 key:d45e97f3d6
+--- type:MultipleChoiceExercise xp:50 skills:1 key:8abfaf0f2b
+
 
 ## Regression Packages
 You can use help functions to read about the following functions ` lm `, ` glm ` and ` mlogit `
 
-Which one allows to perform regression with multinomial dependent/response variable (more than two factors)
+Which one allows to perform regression with multinomial dependent/response variable (more than two factors)?
 
 *** =instructions
 - lm
