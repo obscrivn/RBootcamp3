@@ -35,6 +35,7 @@ t.test(cars$speed[CONDITION], mu = X)
 ```{r}
 # change X by the correct values
 t.test(cars$speed, mu=, conf.level = .90) 
+
 # add condition and mean
 t.test(cars$speed[cars$dist < 40], mu = 12)
 ```
