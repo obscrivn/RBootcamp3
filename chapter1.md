@@ -90,10 +90,8 @@ You can convert you data into data frame by using ` as.data.frame() `
 
 *** =instructions
 
-- Change the line 1 : instead of byrow=TRUE, use byrow=FALSE, add number **15** at the end of the vector
-- Change ncol to 2 instead of 3
-- Change colnames to only High and Low
-- Change row name to only current and former
+- Change the line 1 : instead of byrow=TRUE, use ` byrow=FALSE `
+- Change colnames to only **h**,**l**,**m**
 - Convert a table into  a data frame using ` as.data.frame() `
 - Type ` str() ` function
 
@@ -133,14 +131,15 @@ smoke <- as.data.frame(smoke)
 *** =solution
 ```{r}
 
-smoke <- matrix(c(51,43,22,92,28,21,68,22,9,15),ncol=2,byrow=FALSE)
+smoke <- matrix(c(51,43,22,92,28,21,68,22,9),ncol=3,byrow=FALSE)
 
-colnames(smoke) <- c("High","Low")
+colnames(smoke) <- c("h","l","m")
 
-rownames(smoke) <- c("current","former")
+rownames(smoke) <- c("current","former","never")
 
 smoke <- as.data.frame(smoke)
 
+str(smoke)
 
 ```
 *** =sct
@@ -149,6 +148,7 @@ test_object("smoke",incorrect_msg = "try again")
 test_object("colnames(smoke)")
 test_object("rownames(smoke)")
 test_object("smoke")
+test_object("str(smoke)")
 success_msg("Good work!")
 
 ```
