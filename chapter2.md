@@ -3,7 +3,7 @@ title       : T-Test
 description : 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:4c038f7bad
-
+## T-test
 Let's look again at the speeds in the dataframe cars. 
 *** =instructions
 
@@ -47,8 +47,6 @@ test_output_contains("t.test(cars$speed[cars$dist < 40], mu = 12)")
 success_msg("Good work!")
 
 ```
-
-
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:a6b607960f
 ## Correlation
